@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kMT-qj-Sv4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--即時新聞-->
+        <scene sceneID="Tbn-lK-9a9">
+            <objects>
+                <tableViewController id="cMn-CV-P5j" customClass="ArticleListViewController" customModule="MyNewsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uQe-hc-4FV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArticleCell" id="eS9-Ji-Sc6" customClass="ArticleCell" customModule="MyNewsDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eS9-Ji-Sc6" id="0OE-cT-g6Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5hQ-AT-Mqv">
+                                            <rect key="frame" x="8" y="8" width="326" height="70.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WmE-P9-mTw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70.5"/>
+                                                    <color key="backgroundColor" red="0.92437341370558379" green="0.92437341370558379" blue="0.92437341370558379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="WmE-P9-mTw" secondAttribute="height" multiplier="1:1" id="J5k-jA-bjB"/>
+                                                        <constraint firstAttribute="width" constant="70" id="q9l-IN-3AN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jjM-cb-N9w">
+                                                    <rect key="frame" x="80" y="0.0" width="246" height="41.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新聞標題" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shz-8H-bNC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="246" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017/3/26 00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YE-Q1-H3k">
+                                                            <rect key="frame" x="0.0" y="25.5" width="246" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="5hQ-AT-Mqv" secondAttribute="bottom" priority="750" constant="8" id="9uy-pD-NlF"/>
+                                        <constraint firstItem="5hQ-AT-Mqv" firstAttribute="leading" secondItem="0OE-cT-g6Y" secondAttribute="leading" constant="8" id="VQR-FQ-1Jq"/>
+                                        <constraint firstItem="5hQ-AT-Mqv" firstAttribute="top" secondItem="0OE-cT-g6Y" secondAttribute="top" constant="8" id="kM4-1O-esA"/>
+                                        <constraint firstAttribute="trailing" secondItem="5hQ-AT-Mqv" secondAttribute="trailing" constant="8" id="klX-3Q-2jD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coverImageView" destination="WmE-P9-mTw" id="qS3-qX-dgF"/>
+                                    <outlet property="headingLabel" destination="shz-8H-bNC" id="SUZ-1R-17N"/>
+                                    <outlet property="publishedDateLabel" destination="7YE-Q1-H3k" id="cO7-R3-WHQ"/>
+                                    <segue destination="gT6-4k-5na" kind="show" identifier="showArticleDetail" id="cZd-Mw-gIF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cMn-CV-P5j" id="wbU-yX-Paa"/>
+                            <outlet property="delegate" destination="cMn-CV-P5j" id="Qzw-1r-www"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="即時新聞" id="s2o-b6-2V2"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="zcV-JL-bmO">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle"/>
+                        <connections>
+                            <action selector="refreshPulled:" destination="cMn-CV-P5j" eventType="valueChanged" id="1IZ-zJ-Xqi"/>
+                        </connections>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZJ-Fi-1m7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1456.8" y="-6.746626686656672"/>
+        </scene>
+        <!--新聞標題-->
+        <scene sceneID="o9i-rO-fSc">
+            <objects>
+                <viewController id="gT6-4k-5na" customClass="ArticleDetailViewController" customModule="MyNewsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9e2-ck-PS3"/>
+                        <viewControllerLayoutGuide type="bottom" id="iRD-bf-S78"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TIg-fv-GoF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iI-GQ-On8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZk-aQ-Cah" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="586"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fsd-aG-5Ji">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="586"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGd-LS-Fa3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T84-Ni-teK">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" priority="750" constant="120" id="U1r-uf-EhE"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xaw-QB-sOH">
+                                                                <rect key="frame" x="0.0" y="39.5" width="375" height="80.5"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xb4-mr-y0h">
+                                                                        <rect key="frame" x="10" y="15" width="355" height="50.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新聞標題" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKO-f4-90T">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="355" height="26.5"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017/03/20 00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gO-Vm-XmR">
+                                                                                <rect key="frame" x="0.0" y="34.5" width="355" height="16"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                <color key="textColor" red="0.84348351808997712" green="0.84348351808997712" blue="0.84348351808997712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40475171232876711" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="xb4-mr-y0h" secondAttribute="bottom" constant="15" id="1gY-WP-GhL"/>
+                                                                    <constraint firstItem="xb4-mr-y0h" firstAttribute="leading" secondItem="Xaw-QB-sOH" secondAttribute="leading" constant="10" id="6L8-EU-rGR"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="xb4-mr-y0h" secondAttribute="trailing" constant="10" id="Uwb-jJ-2pS"/>
+                                                                    <constraint firstItem="xb4-mr-y0h" firstAttribute="top" secondItem="Xaw-QB-sOH" secondAttribute="top" constant="15" id="YE0-En-700"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Xaw-QB-sOH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PGd-LS-Fa3" secondAttribute="top" constant="20" id="7Of-dv-AZi"/>
+                                                            <constraint firstItem="T84-Ni-teK" firstAttribute="leading" secondItem="PGd-LS-Fa3" secondAttribute="leading" id="9hN-o0-eJ0"/>
+                                                            <constraint firstAttribute="trailing" secondItem="T84-Ni-teK" secondAttribute="trailing" id="Mf7-7I-bbc"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Xaw-QB-sOH" secondAttribute="bottom" id="SX6-Gg-Icz"/>
+                                                            <constraint firstItem="Xaw-QB-sOH" firstAttribute="leading" secondItem="PGd-LS-Fa3" secondAttribute="leading" id="W5p-wy-zST"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Xaw-QB-sOH" secondAttribute="trailing" id="nBr-ok-BGd"/>
+                                                            <constraint firstAttribute="bottom" secondItem="T84-Ni-teK" secondAttribute="bottom" id="qhl-3L-IuZ"/>
+                                                            <constraint firstItem="T84-Ni-teK" firstAttribute="top" secondItem="PGd-LS-Fa3" secondAttribute="top" id="xKs-XQ-69u"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdL-kd-Mol">
+                                                        <rect key="frame" x="0.0" y="120" width="375" height="466"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xJ4-CT-1lJ">
+                                                                <rect key="frame" x="10" y="20" width="355" height="426"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAC-AW-yx4">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="426"/>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment content="飯年許一親和應沒因師？式回子始曾是大場考然是新好生過動卻有就海走引小。現味起利思理、時離有北夠會？達的利不、推晚難口平也論外教，事長心樹聲一馬異的得高了我風傳空業值國來界位事；邊級！">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" red="0.19840577411167515" green="0.19840577411167515" blue="0.19840577411167515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <font key="NSFont" size="15" name=".PingFangTC-Regular"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="10" lineHeightMultiple="1.7" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment>
+                                                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                                                <attributes>
+                                                                                    <color key="NSColor" red="0.19840577411167515" green="0.19840577411167515" blue="0.19840577411167515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="10" lineHeightMultiple="1.7" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment content="生都理，低整意友老示先強">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" red="0.19840577411167515" green="0.19840577411167515" blue="0.19840577411167515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <font key="NSFont" size="15" name=".PingFangTC-Regular"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="10" lineHeightMultiple="1.7" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment content="……">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" red="0.19840577411167515" green="0.19840577411167515" blue="0.19840577411167515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="10" lineHeightMultiple="1.7" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment content="與子德論資這，始的化調、她房議頭天信都我費南著，西時滿衣大臺會死法受名原使來會現大不怎，活加品陽不展立反、紅況那辦表。">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" red="0.19840577411167515" green="0.19840577411167515" blue="0.19840577411167515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <font key="NSFont" size="15" name=".PingFangTC-Regular"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="10" lineHeightMultiple="1.7" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment>
+                                                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                                                <attributes>
+                                                                                    <color key="NSColor" red="0.19840577411167515" green="0.19840577411167515" blue="0.19840577411167515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="10" lineHeightMultiple="1.7" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment content="公不消吃它！內處機行這現千的不視國那麼樣約、園目計飛不定，動歷就以，意最園管力當流兒司相朋會不用保園該本，一百不；給什建馬車包別孩條在竟事認上，音他古裡人。">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" red="0.19840577411167515" green="0.19840577411167515" blue="0.19840577411167515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <font key="NSFont" size="15" name=".PingFangTC-Regular"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="10" lineHeightMultiple="1.7" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="xJ4-CT-1lJ" firstAttribute="leading" secondItem="CdL-kd-Mol" secondAttribute="leading" constant="10" id="5ZX-j6-pOu"/>
+                                                            <constraint firstAttribute="bottom" secondItem="xJ4-CT-1lJ" secondAttribute="bottom" constant="20" id="6io-wW-BYK"/>
+                                                            <constraint firstItem="xJ4-CT-1lJ" firstAttribute="top" secondItem="CdL-kd-Mol" secondAttribute="top" constant="20" id="G6s-Nn-r6p"/>
+                                                            <constraint firstAttribute="trailing" secondItem="xJ4-CT-1lJ" secondAttribute="trailing" constant="10" id="pfL-6L-Czg"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="fsd-aG-5Ji" firstAttribute="top" secondItem="RZk-aQ-Cah" secondAttribute="top" id="MBx-WI-cch"/>
+                                            <constraint firstAttribute="bottom" secondItem="fsd-aG-5Ji" secondAttribute="bottom" id="WbW-mh-6CA"/>
+                                            <constraint firstAttribute="trailing" secondItem="fsd-aG-5Ji" secondAttribute="trailing" id="gvv-RR-XK0"/>
+                                            <constraint firstItem="fsd-aG-5Ji" firstAttribute="leading" secondItem="RZk-aQ-Cah" secondAttribute="leading" id="s2y-lB-IvZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RZk-aQ-Cah" secondAttribute="bottom" id="0Ru-UD-K6V"/>
+                                    <constraint firstItem="RZk-aQ-Cah" firstAttribute="width" secondItem="5iI-GQ-On8" secondAttribute="width" id="JUh-X1-aod"/>
+                                    <constraint firstItem="RZk-aQ-Cah" firstAttribute="leading" secondItem="5iI-GQ-On8" secondAttribute="leading" id="dUt-3q-GN5"/>
+                                    <constraint firstItem="RZk-aQ-Cah" firstAttribute="top" secondItem="5iI-GQ-On8" secondAttribute="top" id="w4D-7d-WqQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="RZk-aQ-Cah" secondAttribute="trailing" id="yp4-sX-kSG"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5iI-GQ-On8" firstAttribute="top" secondItem="TIg-fv-GoF" secondAttribute="topMargin" id="3KZ-gO-4Mo"/>
+                            <constraint firstAttribute="trailing" secondItem="5iI-GQ-On8" secondAttribute="trailing" id="WPG-dK-Qr1"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="5iI-GQ-On8" secondAttribute="bottom" id="XL6-5o-irC"/>
+                            <constraint firstItem="5iI-GQ-On8" firstAttribute="leading" secondItem="TIg-fv-GoF" secondAttribute="leading" id="qUv-tg-13j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="新聞標題" id="3tj-9c-AK3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="1WH-UF-Rko">
+                            <connections>
+                                <action selector="actionTapped:" destination="gT6-4k-5na" id="y6L-AU-zPc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentLabel" destination="qAC-AW-yx4" id="Uj9-Un-V4m"/>
+                        <outlet property="headingLabel" destination="bKO-f4-90T" id="It3-Ol-YGe"/>
+                        <outlet property="imageHeightConstraint" destination="U1r-uf-EhE" id="sfy-gW-27k"/>
+                        <outlet property="photoImageView" destination="T84-Ni-teK" id="VoT-Id-B7R"/>
+                        <outlet property="publishedDateLabel" destination="7gO-Vm-XmR" id="hpY-VE-oEZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5XN-h1-gpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505" y="-7"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0JI-aH-Tv7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kMT-qj-Sv4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Ub-Ch-lTh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.27843137254901962" green="0.38431372549019605" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cMn-CV-P5j" kind="relationship" relationship="rootViewController" id="kQs-X7-IhH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egB-pV-Bj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517.60000000000002" y="-6.746626686656672"/>
+        </scene>
+    </scenes>
+</document>
